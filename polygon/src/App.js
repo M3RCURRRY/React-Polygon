@@ -1,5 +1,7 @@
-import "./App.css";
 import React from "react";
+import "./App.css";
+import SimpleClass from "./components/SimpleClass";
+import SimpleFunc from "./components/SimpleFunc";
 
 const userName = "John";
 const plainText = "SampleText";
@@ -9,9 +11,9 @@ const childElement = <p>Child paragraph</p>;
 const parentElement = <div>{childElement}</div>;
 
 const compiledLikeElement = React.createElement(
-  'h2',
+  "h2",
   null,
-  'Compiled-like by Babel Element'
+  "Compiled-like by Babel Element"
 );
 
 function App() {
@@ -21,6 +23,9 @@ function App() {
       {parElement}
       <div>{parentElement}</div>
       {compiledLikeElement}
+      <p>Time {new Date().toLocaleTimeString()}</p>
+      <SimpleFunc testValue="funcValue"/>
+      <SimpleClass testValue="classValue"/>
     </div>
   );
 }
