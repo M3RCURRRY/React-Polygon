@@ -1,7 +1,14 @@
 import React from "react";
 import "./App.css";
+import Clock from "./components/Clock";
+import ChangeContentButton from "./components/ChangeContentButton";
 import SimpleClass from "./components/SimpleClass";
 import SimpleFunc from "./components/SimpleFunc";
+import ToggleButton from "./components/ToggleButton";
+import LoginForm from "./components/LoginForm";
+import SimpleList from "./components/SimpleList";
+import SimpleForm from "./components/SimpleForm";
+
 
 const userName = "John";
 const plainText = "SampleText";
@@ -26,6 +33,12 @@ function App() {
       <p>Time {new Date().toLocaleTimeString()}</p>
       <SimpleFunc testValue="funcValue"/>
       <SimpleClass testValue="classValue"/>
+      <Clock/>
+      <ChangeContentButton content="Simple Drop Button"/>
+      <ToggleButton/>
+      <LoginForm/>
+      <SimpleList/>
+      <SimpleForm/>
     </div>
   );
 }
