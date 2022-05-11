@@ -8,6 +8,8 @@ import ToggleButton from "./components/ToggleButton";
 import LoginForm from "./components/LoginForm";
 import SimpleList from "./components/SimpleList";
 import SimpleForm from "./components/SimpleForm";
+import SimpleSelectForm from "./components/SimpleSelectForm";
+import MultipleForm from "./components/MultipleForm";
 
 
 const userName = "John";
@@ -39,6 +41,10 @@ function App() {
       <LoginForm/>
       <SimpleList/>
       <SimpleForm/>
+      <SimpleSelectForm/>
+      <br />
+      <br />
+      <MultipleForm />
     </div>
   );
 }
