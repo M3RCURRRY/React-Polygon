@@ -10,6 +10,9 @@ import SimpleList from "./components/SimpleList";
 import SimpleForm from "./components/SimpleForm";
 import SimpleSelectForm from "./components/SimpleSelectForm";
 import MultipleForm from "./components/MultipleForm";
+import Parent from "./components/Parent";
+import LoginButton from "./components/LoginButton";
+import SimpleBorderedForm from "./components/SimpleBorderedForm";
 
 
 const userName = "John";
@@ -45,6 +48,17 @@ function App() {
       <br />
       <br />
       <MultipleForm />
+      <Parent
+        button={
+          <LoginButton loginHandler={() => console.log("Child button clicked!")}/>
+        }>
+        <h1>
+          Some header inside
+        </h1>
+        <p>lorem ipsum dolor sit amet</p>
+        <button>no action button</button>
+      </Parent>
+      <SimpleBorderedForm />
     </div>
   );
 }
