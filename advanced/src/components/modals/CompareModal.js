@@ -1,5 +1,6 @@
 import React from "react";
 import ModalSpace from "../layout/sides/ModalSpace/ModalSpace";
+import styles from "./CompareModal.module.css";
 
 class CompareModal extends React.Component {
   constructor(props) {
@@ -9,7 +10,7 @@ class CompareModal extends React.Component {
   render() {
     return(
       <ModalSpace>
-        <h1>Compare two courses</h1>
+        <h2>Compare two courses</h2>
       </ModalSpace>
     )
   }

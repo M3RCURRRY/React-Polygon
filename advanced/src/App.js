@@ -50,7 +50,7 @@ class App extends React.Component {
         }}
       >
         <ThemeContext.Provider value={this.state.theme}>
-          {this.state.isFilterOpened && <FilterModal />}
+          {this.state.isFilterOpened && <FilterModal onSubmit={this.toggleFilterModal}/>}
           {this.state.isCompareOpened && <CompareModal />}
 
           <Header
