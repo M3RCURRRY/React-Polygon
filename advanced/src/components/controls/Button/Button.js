@@ -10,8 +10,8 @@ class Button extends React.Component {
         onClick={this.props.onClick}
         className={styles.button}
         style={{
-          backgroundColor: theme.contentForeground,
-          border: `15px solid ${theme.contentBackground}`,
+          backgroundColor: theme.contentBackground,
+          border: `5px solid ${theme.contentForeground}`,
           color: theme.color
         }}
       >

@@ -4,4 +4,6 @@ ul {
   -moz-columns: 2;
   list-style: none;
   padding: 0;
+
+  margin: 10px;
 }
