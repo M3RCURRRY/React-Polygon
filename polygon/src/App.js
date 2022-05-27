@@ -13,6 +13,11 @@ import MultipleForm from "./components/MultipleForm";
 import Parent from "./components/Parent";
 import LoginButton from "./components/LoginButton";
 import SimpleBorderedForm from "./components/SimpleBorderedForm";
+import RefParent from "./components/RefParent";
+import ErrorBoundary from "./components/ErrorBoundary";
+import ErroredComponent from "./components/ErroredComponent";
+import ExceptionComponent from "./components/ExceptionComponent";
+import RefButtonContainer from "./components/RefButtonContainer";
 
 
 const userName = "John";
@@ -59,6 +64,14 @@ function App() {
         <button>no action button</button>
       </Parent>
       <SimpleBorderedForm />
+      <RefParent/>
+      <ErrorBoundary>
+        <ErroredComponent />
+      </ErrorBoundary>
+      <ErrorBoundary>
+        <ExceptionComponent />
+      </ErrorBoundary>
+      <RefButtonContainer />
     </div>
   );
 }
