@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./Header.module.css";
 import { ThemeContext } from "../../themeContext";
+import Button from "../../controls/Button/Button";
 
 class Header extends React.Component {
   constructor(props) {
@@ -15,9 +16,9 @@ class Header extends React.Component {
           <h1>ReactCrypto</h1>
         </div>
         <div className={styles.buttonContainer}>
-          <button onClick={this.props.onFilterClick}>Filter</button>
-          <button onClick={this.props.onCompareClick}>Compare</button>
-          <button onClick={this.props.onThemeChange}>Change Theme</button>
+          <Button onClick={this.props.onFilterClick}>Filter</Button>
+          <Button onClick={this.props.onCompareClick}>Compare</Button>
+          <Button onClick={this.props.onThemeChange}>Change Theme</Button>
         </div>
       </header>
     );

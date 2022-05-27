@@ -11,11 +11,11 @@ class Button extends React.Component {
         className={styles.button}
         style={{
           backgroundColor: theme.contentBackground,
-          border: `5px solid ${theme.contentForeground}`,
+          border: `2px solid ${theme.background}`,
           color: theme.color
         }}
       >
-        {this.props.content}
+        {this.props.children}
       </button>
     );
   }

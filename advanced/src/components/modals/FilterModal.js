@@ -30,7 +30,7 @@ class FilterModal extends React.Component {
             })
           }
         </ul>
-        <Button onClick={this.props.onSubmit} content="Save changes"/>
+        <Button onClick={this.props.onSubmit}>Save changes</Button>
       </ModalSpace>
     )
   }

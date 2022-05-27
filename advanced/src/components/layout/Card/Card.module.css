@@ -1,0 +1,12 @@
+.card {
+  min-width: 200px;
+  width: fit-content;
+  height: fit-content;
+  margin: 25px;
+
+  border-radius: 5px;
+}
+
+h2 {
+  text-align: center;
+}

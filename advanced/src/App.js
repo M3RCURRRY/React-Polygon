@@ -6,6 +6,7 @@ import { ThemeContext, themes } from "./components/themeContext";
 import Header from "./components/layout/Header/Header";
 import FilterModal from "./components/modals/FilterModal";
 import CompareModal from "./components/modals/CompareModal";
+import CardContainer from "./components/layout/CardContainer/CardContainer";
 
 class App extends React.Component {
   constructor(props) {
@@ -58,6 +59,8 @@ class App extends React.Component {
             onFilterClick={this.toggleFilterModal}
             onThemeChange={this.toggleTheme}
           />
+
+          <CardContainer />
         </ThemeContext.Provider>
       </div>
     );

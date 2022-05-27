@@ -2,9 +2,9 @@ import React from "react";
 
 export const themes = {
   light: {
-    contentBackground: "#018786",
-    contentForeground: "#03DAC6",
-    foreground: "#FFFFFF",
+    contentBackground: "#c2c2c2",
+    contentForeground: "#111111",
+    foreground: "#c2c2c2",
     background: "#FFFFFF",
     color: "#000000",
     error: "#B00020",
