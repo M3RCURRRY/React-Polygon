@@ -20,7 +20,6 @@ import ExceptionComponent from "./components/ExceptionComponent";
 import RefButtonContainer from "./components/RefButtonContainer";
 import FirstSub from "./components/hoc/FirstSub";
 
-
 const userName = "John";
 const plainText = "SampleText";
 const parElement = <p>Text : {plainText}</p>;
@@ -36,19 +35,36 @@ const compiledLikeElement = React.createElement(
 
 function wrapHOC(WrappedComponent) {
   return class extends React.Component {
+    constructor(props) {
+      super(props);
+
+      this.state = {
+        calledTimes: 0,
+      };
+
+      this.updateHandler = this.updateHandler.bind(this);
+    }
+
+    updateHandler() {
+      this.setState((prev) => ({
+        calledTimes: prev.calledTimes + 1,
+      }));
+    }
+
     componentDidUpdate(prev) {
       console.log("Previous props: ", prev);
       console.log("Current props: ", this.props);
     }
 
     render() {
-      return <WrappedComponent {...this.props} />;
+      return <WrappedComponent data={this.updateHandler} {...this.props} />;
     }
-  }
+  };
 }
 
+const Wrapped = wrapHOC(FirstSub);
+
 function App() {
-  const Wrapped = wrapHOC(<FirstSub/>)
   return (
     <div className="App">
       <h1>Hello, {userName}!</h1>
@@ -56,30 +72,31 @@ function App() {
       <div>{parentElement}</div>
       {compiledLikeElement}
       <p>Time {new Date().toLocaleTimeString()}</p>
-      <SimpleFunc testValue="funcValue"/>
-      <SimpleClass testValue="classValue"/>
-      <Clock/>
-      <ChangeContentButton content="Simple Drop Button"/>
-      <ToggleButton/>
-      <LoginForm/>
-      <SimpleList/>
-      <SimpleForm/>
-      <SimpleSelectForm/>
+      <SimpleFunc testValue="funcValue" />
+      <SimpleClass testValue="classValue" />
+      <Clock />
+      <ChangeContentButton content="Simple Drop Button" />
+      <ToggleButton />
+      <LoginForm />
+      <SimpleList />
+      <SimpleForm />
+      <SimpleSelectForm />
       <br />
       <br />
       <MultipleForm />
       <Parent
         button={
-          <LoginButton loginHandler={() => console.log("Child button clicked!")}/>
-        }>
-        <h1>
-          Some header inside
-        </h1>
+          <LoginButton
+            loginHandler={() => console.log("Child button clicked!")}
+          />
+        }
+      >
+        <h1>Some header inside</h1>
         <p>lorem ipsum dolor sit amet</p>
         <button>no action button</button>
       </Parent>
       <SimpleBorderedForm />
-      <RefParent/>
+      <RefParent />
       <ErrorBoundary>
         <ErroredComponent />
       </ErrorBoundary>
@@ -87,9 +104,8 @@ function App() {
         <ExceptionComponent />
       </ErrorBoundary>
       <RefButtonContainer />
-      
       <ErrorBoundary>
-        <Wrapped value="Value to render"/>
+        <Wrapped value="Value to render" />
       </ErrorBoundary>
     </div>
   );
