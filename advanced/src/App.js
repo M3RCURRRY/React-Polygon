@@ -7,6 +7,7 @@ import Header from "./components/layout/Header/Header";
 import FilterModal from "./components/modals/FilterModal";
 import CompareModal from "./components/modals/CompareModal";
 import CardContainer from "./components/layout/CardContainer/CardContainer";
+import { toHaveStyle } from "@testing-library/jest-dom/dist/matchers";
 
 class App extends React.Component {
   constructor(props) {

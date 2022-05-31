@@ -11,7 +11,7 @@ class RefParent extends React.Component {
   }
 
   onGetRefState() {
-    console.log(this.myRef.current.state.textValue);
+    console.log(this.myRef.current);
   }
 
   render() {

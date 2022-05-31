@@ -18,6 +18,7 @@ import ErrorBoundary from "./components/ErrorBoundary";
 import ErroredComponent from "./components/ErroredComponent";
 import ExceptionComponent from "./components/ExceptionComponent";
 import RefButtonContainer from "./components/RefButtonContainer";
+import FirstSub from "./components/hoc/FirstSub";
 
 
 const userName = "John";
@@ -33,7 +34,21 @@ const compiledLikeElement = React.createElement(
   "Compiled-like by Babel Element"
 );
 
+function wrapHOC(WrappedComponent) {
+  return class extends React.Component {
+    componentDidUpdate(prev) {
+      console.log("Previous props: ", prev);
+      console.log("Current props: ", this.props);
+    }
+
+    render() {
+      return <WrappedComponent {...this.props} />;
+    }
+  }
+}
+
 function App() {
+  const Wrapped = wrapHOC(<FirstSub/>)
   return (
     <div className="App">
       <h1>Hello, {userName}!</h1>
@@ -72,6 +87,10 @@ function App() {
         <ExceptionComponent />
       </ErrorBoundary>
       <RefButtonContainer />
+      
+      <ErrorBoundary>
+        <Wrapped value="Value to render"/>
+      </ErrorBoundary>
     </div>
   );
 }
