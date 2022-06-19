@@ -8,6 +8,9 @@ import FilterModal from "./components/modals/FilterModal";
 import CompareModal from "./components/modals/CompareModal";
 import CardContainer from "./components/layout/CardContainer/CardContainer";
 import { toHaveStyle } from "@testing-library/jest-dom/dist/matchers";
+import ErrorBoundary from "./ErrorBoundary";
+import ErrorBoundaryUpper from "./ErrorBoundaryUpper";
+import TestComponent from "./TestComponent";
 
 class App extends React.Component {
   constructor(props) {
@@ -42,6 +45,10 @@ class App extends React.Component {
     }));
   }
 
+  callException() {
+    throw new Error("BAN!");
+  }
+
   render() {
     return (
       <div
@@ -60,7 +67,16 @@ class App extends React.Component {
             onFilterClick={this.toggleFilterModal}
             onThemeChange={this.toggleTheme}
           />
-
+          <ErrorBoundaryUpper>
+            <ErrorBoundary>
+              {/* Не обработается, т.к. обработчик вызывается отложенно по событию */}
+              <button onClick={() => {this.causeError()}}>Click me to cause error</button>
+              {/* Не обработается, т.к. обработчик вызывается отложенно по событию */}
+              <button onClick={() => {this.callException()}}>Click me to cause error</button>
+              <TestComponent />
+            </ErrorBoundary>
+          </ErrorBoundaryUpper>
+          
           <CardContainer />
         </ThemeContext.Provider>
       </div>
