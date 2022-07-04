@@ -1,0 +1,10 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.box {
+  background-color: gray;
+  width: 200px;
+  height: 200px;
+}
