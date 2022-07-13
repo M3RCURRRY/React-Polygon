@@ -20,6 +20,7 @@ class Parent extends React.Component {
   constructor(props) {
     super(props);
     this.childRef = React.createRef();
+    //const childRef = useRef(null);
   }
 
   componentDidMount() {
