@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/my-hooks/static/css/main.26a56808.css",
-    "main.js": "/my-hooks/static/js/main.d0de1c33.js",
-    "static/js/787.fa0f7a86.chunk.js": "/my-hooks/static/js/787.fa0f7a86.chunk.js",
-    "index.html": "/my-hooks/index.html",
-    "main.26a56808.css.map": "/my-hooks/static/css/main.26a56808.css.map",
-    "main.d0de1c33.js.map": "/my-hooks/static/js/main.d0de1c33.js.map",
-    "787.fa0f7a86.chunk.js.map": "/my-hooks/static/js/787.fa0f7a86.chunk.js.map"
+    "main.css": "/React-Polygon/static/css/main.26a56808.css",
+    "main.js": "/React-Polygon/static/js/main.b20ac4c9.js",
+    "static/js/787.fa0f7a86.chunk.js": "/React-Polygon/static/js/787.fa0f7a86.chunk.js",
+    "index.html": "/React-Polygon/index.html",
+    "main.26a56808.css.map": "/React-Polygon/static/css/main.26a56808.css.map",
+    "main.b20ac4c9.js.map": "/React-Polygon/static/js/main.b20ac4c9.js.map",
+    "787.fa0f7a86.chunk.js.map": "/React-Polygon/static/js/787.fa0f7a86.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.26a56808.css",
-    "static/js/main.d0de1c33.js"
+    "static/js/main.b20ac4c9.js"
   ]
 }
