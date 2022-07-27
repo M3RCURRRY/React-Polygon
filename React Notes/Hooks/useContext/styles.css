@@ -1,0 +1,24 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.area {
+  background-color: aqua;
+  width: 100px;
+  height: 100px;
+}
+
+.mobileHeader,
+.defaultHeader {
+  width: 100%;
+  height: 10vh;
+}
+
+.mobileHeader {
+  background-color: burlywood;
+}
+
+.defaultHeader {
+  background-color: cadetblue;
+}
