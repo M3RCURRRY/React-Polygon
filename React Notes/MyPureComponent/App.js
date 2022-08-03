@@ -2,8 +2,6 @@ import React from "react";
 
 class MyPureComponent extends React.Component {
   shouldComponentUpdate(nextProps, nextState) {
-    console.log("Something changed!");
-
     // Props compare
     if (nextProps.length !== this.props.length) {
       console.log("Props length is not equal! Rerender!");
@@ -39,18 +37,22 @@ class Test extends MyPureComponent {
     super(props);
 
     this.state = {
-      counter: 0
+      counter: 0,
+      prop1: props.dep1,
+      prop2: props.dep2
     };
   }
 
   counterHandler() {
     this.setState((prev) => ({
+      ...prev,
       counter: prev.counter + 1
     }));
   }
 
   noChangeHandler() {
     this.setState((prev) => ({
+      ...prev,
       counter: prev.counter
     }));
   }
@@ -77,17 +79,20 @@ export default function App() {
     dep: "Object"
   };
 
+  let newDep1 = "String";
+  let newDep2 = {
+    dep: "NewObject"
+  };
+
   function buttonHandler() {
-    dep1 = "String";
-    dep2 = {
-      dep: "NewObject"
-    };
+    dep1 = newDep1;
+    dep2 = newDep2;
   }
 
   return (
     <div>
-      <button onClick={buttonHandler}>Change props</button>
       <Test dep1={dep1} dep2={dep2} />
+      <button onClick={buttonHandler}>Change props</button>
     </div>
   );
 }
