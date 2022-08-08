@@ -1,15 +1,13 @@
 {
   "files": {
-    "main.css": "/React-Polygon/static/css/main.26a56808.css",
-    "main.js": "/React-Polygon/static/js/main.b20ac4c9.js",
-    "static/js/787.fa0f7a86.chunk.js": "/React-Polygon/static/js/787.fa0f7a86.chunk.js",
+    "main.css": "/React-Polygon/static/css/main.cb53811a.css",
+    "main.js": "/React-Polygon/static/js/main.d9306f04.js",
     "index.html": "/React-Polygon/index.html",
-    "main.26a56808.css.map": "/React-Polygon/static/css/main.26a56808.css.map",
-    "main.b20ac4c9.js.map": "/React-Polygon/static/js/main.b20ac4c9.js.map",
-    "787.fa0f7a86.chunk.js.map": "/React-Polygon/static/js/787.fa0f7a86.chunk.js.map"
+    "main.cb53811a.css.map": "/React-Polygon/static/css/main.cb53811a.css.map",
+    "main.d9306f04.js.map": "/React-Polygon/static/js/main.d9306f04.js.map"
   },
   "entrypoints": [
-    "static/css/main.26a56808.css",
-    "static/js/main.b20ac4c9.js"
+    "static/css/main.cb53811a.css",
+    "static/js/main.d9306f04.js"
   ]
 }
